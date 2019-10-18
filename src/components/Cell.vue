@@ -1,22 +1,16 @@
 <template>
-<<<<<<< HEAD
   <div class="cell" v-bind:style="{ backgroundColor: color}">
     {{this.agentID}}
-    <br />
+    <br>
     {{this.cellData}}
     <!-- <br />
     {{this.tiled[this.y][x]}}-->
-=======
-  <div class="cell">
-    <!-- <div class="content" v-show="isValueVisible">{{ value }}</div> -->
->>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
   </div>
 </template>
 
 <script>
 export default {
   props: {
-<<<<<<< HEAD
     cellData: {
       type: Number
     },
@@ -30,22 +24,10 @@ export default {
     tiled: {
       Array
     }
-=======
-    cellData: Object
-    // bombIcon: {
-    //   type: String,
-    //   default: "💣"
-    // },
-    // flagIcon: {
-    //   type: String,
-    //   default: "❗"
-    // }
->>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
   },
   data() {
     return {};
   },
-<<<<<<< HEAD
   methods: {},
   computed: {
     color: function() {
@@ -76,42 +58,6 @@ export default {
           return this.team[1].agents[i].agentID;
         }
       }
-=======
-  methods: {
-    onCellLeftClicked() {
-      this.$emit("onCellLeftClicked", {
-        x: this.cellData.x,
-        y: this.cellData.y
-      });
-    },
-    onCellRightClicked() {
-      this.$emit("onCellRightClicked", {
-        x: this.cellData.x,
-        y: this.cellData.y
-      });
-    }
-  },
-  computed: {
-    value() {
-      // Revealed can be a bomb or a number
-      if (this.isRevealed) {
-        if (this.cellData.isBomb) {
-          return this.bombIcon;
-        } else {
-          return this.cellData.proximityCount > 0
-            ? this.cellData.proximityCount
-            : "";
-        }
-      }
-      // Unrevealed is marked or empty
-      return this.cellData.isMarked ? this.flagIcon : "";
-    },
-    isValueVisible() {
-      return this.isRevealed || this.cellData.isMarked;
-    },
-    isRevealed() {
-      return this.cellData.isRevealed;
->>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
     }
   }
 };
@@ -124,15 +70,10 @@ export default {
   position: relative;
   background-color: #eee;
   font-weight: bold;
-<<<<<<< HEAD
   min-width: 60px;
   max-width: 60px;
   max-height: 35px;
   min-height: 35px;
-=======
-  min-width: 24px;
-  max-width: 40px;
->>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
   border: #ddd 1px solid;
 }
 
@@ -140,11 +81,7 @@ export default {
 .cell:before {
   content: "";
   display: block;
-<<<<<<< HEAD
   padding-top: 10%; /* initial ratio of 1:1*/
-=======
-  padding-top: 100%; /* initial ratio of 1:1*/
->>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
 }
 
 .content {
