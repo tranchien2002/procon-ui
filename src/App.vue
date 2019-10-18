@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <b-container class="bv-example-row">
       <b-row>
         <b-col>
@@ -63,17 +64,27 @@
         </b-col>
       </b-row>
     </b-container>
+=======
+    <div v-for="item in [1,2,3,4,5,6,7,7,8]" v-bind:key="item">
+      <Cell />
+    </div>
+>>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
   </div>
 </template>
 
 <script>
 import Cell from "./components/Cell.vue";
+<<<<<<< HEAD
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+=======
+
+>>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
 export default {
   name: "app",
   components: {
     Cell
+<<<<<<< HEAD
   },
   data() {
     return {
@@ -100,6 +111,8 @@ export default {
       let x = this.res.tiled[_x];
       return x[_y];
     }
+=======
+>>>>>>> e29db0f4e08f21de83a678e845d605ded7bcffff
   }
 };
 </script>
