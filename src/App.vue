@@ -31,7 +31,7 @@
               max-rows="6"
             ></b-form-textarea>
             <br>
-            <b-button type="submit" variant="primary" v-on:click="onSubmit">GetMap</b-button>
+            <b-button type="submit" variant="primary" v-on:click="getMap">GetMap</b-button>
             <br>
             <br>
             <br>
@@ -90,7 +90,7 @@ export default {
     };
   },
   methods: {
-    async onSubmit(evt) {
+    async getMap(evt) {
       evt.preventDefault();
       const url = `http://${this.form.host}/matches/${this.form.matchID}`;
       await fetch(url, {

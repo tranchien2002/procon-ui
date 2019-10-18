@@ -1,5 +1,5 @@
 <template>
-  <div class="cell" v-bind:style="{ backgroundColor: color}">
+  <div class="cell" v-bind:style="{ backgroundColor: color, borderColor: border_color}">
     {{this.agentID}}
     <br>
     {{this.cellData}}
@@ -56,6 +56,25 @@ export default {
           this.team[1].agents[i].y - 1 == this.y
         ) {
           return this.team[1].agents[i].agentID;
+        }
+      }
+    },
+    border_color: function() {
+      for (let i in this.team[0].agents) {
+        if (
+          this.team[0].agents[i].x - 1 == this.x &&
+          this.team[0].agents[i].y - 1 == this.y
+        ) {
+          return "Red";
+        }
+      }
+
+      for (let i in this.team[1].agents) {
+        if (
+          this.team[1].agents[i].x - 1 == this.x &&
+          this.team[1].agents[i].y - 1 == this.y
+        ) {
+          return "Red";
         }
       }
     }
